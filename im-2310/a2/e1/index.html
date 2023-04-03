@@ -1,3 +1,10 @@
+
+<!--
+Author: [Hugh Humphris]
+Date: [3/04/2023]
+
+Description: This HTML file contains a container with six items, each with an image and a class for styling, as well as a seventh item with text and an image.
+-->
 <!DOCTYPE html>
 
 <html lang="en">
@@ -9,11 +16,32 @@
         <link rel="stylesheet" href="style.css">
 
         <script src="script.js"></script>
-
+        
     </head>
-
+    
     <body>
-            <h1>yo</h1>
+          <!-- These div elements create items with images and classes for styling -->
+        <div class="container">
+            <div class="item item-1"><img src="img/pic1.png" alt="Background Design" style="width:90%; height:90%;" class="center pic1" ></div>
+            <div class="item item-2"><img src="img/pic2.png" alt="Background Design" style="width:90%; height:90%;" class="center pic2" ></div>
+            <div class="item item-3"><img src="img/pic3.png" alt="Background Design" style="width:90%; height:90%;" class="center pic3" ></div>
+            <div class="item item-4"><img src="img/pic4.png" alt="Background Design" style="width:90%; height:90%;" class="center pic4" ></div>
+            <div class="item item-5"><img src="img/pic5.png" alt="Background Design" style="width:90%; height:90%;" class="center pic5" ></div>
+            <div class="item item-6">
+                <h1>Interactive Media</h1>
+                <p>This page layout is inspired by the hedra page 29 referance Image.</p>
+                <img src="img/Hedra29.png" alt="Hedra Page 29 example" style="width:25%;" class="center">
+                <p>
+                    This Website defines a grid layout with responsive rows, containing six items that are positioned within the grid. 
+                    The code includes styles for the grid, items, and text. 
+                    It also includes media queries for adjusting different widths.
+                </p>
+                <p>
+                    The grid is defined using the .container class, which has a fixed border size, and is centered on the page. 
+                    The grid contains six items, with each item defined using aseparate class (item-1 through item-6). 
+                    The items are positioned within the grid using grid-row and grid-column properties. 
+                </p>
+            </div>
+          </div> 
     </body>
-
 </html>

@@ -1,0 +1,170 @@
+/*                                                                        
+┌───────────────────────────────────────────────────────────────────────────────────────┐
+│                               Assignment 2 Ex 1 IM-2310                               │
+├───────────────────────────────────────────────────────────────────────────────────────┤
+│  This CSS code defines a grid layout with responsive rows, containing six items that  │
+│  are positioned within the grid. The code includes styles for the grid, items, and    │
+│  text. It also includes media queries for adjusting the number of rows on screens     │
+│  with different widths.                                                               │
+│                                                                                       │
+│  The grid is defined using the .container class, which has a fixed border size, and   │
+│  is centered on the page. The grid contains six items, with each item defined using a │
+│  separate class (item-1 through item-6). The items are positioned within the grid     │
+│  using grid-row and grid-column properties.                                           |
+|                                                                                       |
+|  This layout is inspired by "by Hedra Page 29" referance image.                       │
+│                                                                                       │
+│  The text styles include a heading with a text shadow and a responsive font size, as  │
+│  well as paragraph text with a specific font and color.                               │
+│                                                                                       │
+│  This code is authored by Hugh Humphris and was last updated on 3/04/2023             │
+└───────────────────────────────────────────────────────────────────────────────────────┘
+*/
+
+/* defining container and item positioning*/
+.container{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    border: 10px;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .container {
+      grid-template-rows: repeat(10, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .container {
+      grid-template-rows: repeat(20, 1fr);
+    }
+}
+/* Defines the position of specific grid items within the grid */
+.item-1{
+    grid-row:1/3;
+    grid-column:1/2;
+}
+.item-2{
+    grid-row:2/4;
+    grid-column:2/3;
+}
+.item-3{
+    grid-row:1/3;
+    grid-column:3/4;
+}
+.item-4{
+    grid-row:2/4;
+    grid-column:4/5;
+}
+.item-5{
+    grid-row:1/3;
+    grid-column:5/6;
+}
+
+.item-6{
+    grid-row:4/11;
+    grid-column:1/6;
+}
+
+body{
+    margin: 5em 0 0 0;
+    padding: 0;
+    word-spacing: 1.4px;
+    font-family: 'Roboto', sans-serif;
+    color:#0f172a;
+    background-color:#c2d5db;
+}
+/* Defines the style for the grid container */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    border: 10px ;
+}
+.item{/* Defines the style for individual grid items */
+    padding: 0.5em;
+    background-color: #131925;
+    font-weight: 700;
+    color: #c2d5db;
+    border: 10px solid;
+}
+/* Defines the style for grid items when hovered over to create the interactive enlarging effect*/
+.item:hover{
+    border: 10px solid #131925;
+}
+/* Defines a class to center an image or other content block within its parent container */
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+/* text */
+h1{
+    max-width: fit-content;
+    font-size: 5vw; /* set font size to 5% of viewport width */
+    margin: 5vw auto; /* set margin to 5% of viewport width */
+    margin-bottom: 5vw; /* set bottom margin to 5% of viewport width */
+    color: #8abca7;
+    text-shadow: rgba(255, 255, 255, 0.329) 2px 2px 5px;
+}
+p{
+    font-size: 2.5vmin; /* set font size to 2.5% of the smaller viewport dimension */
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 2vmin; /* set bottom margin to 2% of the smaller viewport dimension */
+    text-align: left;
+}
+.pic1:hover {
+    content: url('img/pic1.1.png');
+}
+.pic2:hover {
+    content: url('img/pic2.1.png');
+}
+.pic3:hover {
+    content: url('img/pic3.1.png');
+}
+.pic4:hover {
+    content: url('img/pic4.1.png');
+}
+.pic5:hover {
+    content: url('img/pic5.1.png');
+}
+
+/*this is responsible for changing image on hover*/
+
+/* SOURCES /
+/ Used for learning about media queries /
+/ https://www.nobledesktop.com/learn/html-css/creating-columns-intro-to-css-grid-media-queries /
+/ https://www.youtube.com/watch?v=iWIl9VjbTeQ */
+
+/* General grid information /
+/ https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns /
+/ https://www.youtube.com/watch?v=EiNiSFIPIQE */
+
+/* IMPROVEMENTS MADE DURING PROJECT /
+/ This is the original code I made: /
+/ 
+.container {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+justify-content: center;
+height: 100%;
+width: 100%;
+margin: 0 auto;
+border: 10px;
+} /
+/ This is fine, but when viewing the page on an iPhone display, for example, the website would break after going past the 100px minmax. So I found some tutorials on how to use media queries for grids. */
+
+/* THINGS THE CODE COULD IMPROVE ON /
+/ 1. Could use CSS variables instead of hard coding values such as the font size and colors because I had to hard code a lot of the same colors, which makes it hard to make changes. /
+/ 2. Although the page is usable on mobile, the experience is much worse because the images in the grid shrink a lot, so I could use a mobile-first approach, /
+/ where I'm not trying to bend the website to look good on mobile but a design thinking that I'm using from the start instead of fixing at the end. /
+/ 3. Although the colors look good, they could be higher contrast. /
+/ 4. .Pic#:hover could be condensed using a counter that goes up instead of having to lable all img indevidually, could present problems if scaled up
+/ 5. to stop as much clutter it may be a good idea to have multiple CSS files for differant functions ect */
