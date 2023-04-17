@@ -46,15 +46,18 @@ body{
 }
 
 .FilterSection{
+  padding: 10px;
 
 }
 
 .FilterBox{
-
+  padding: 5px;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .FilterButton{
-  background-color: var(--col-03); /* light orange */
+  background-color: var(--col-03); 
   color: var(--col-02);
   border: none;
   padding: 0.5rem;
@@ -62,6 +65,7 @@ body{
   margin-right: 0.5rem;
   margin-bottom: 0.5rem;
   cursor: pointer;
+  font-size: 1.2rem;
 }
 
 .SelectedFilter{
@@ -69,10 +73,12 @@ body{
 }
 
 .RecipeLink{
-  color: var(--col-02); /* light orange */
+  color: var(--col-02); 
+  font-size: 0.8rem;
 }
 
 .RecipeName{
+  color: var(--col-04);
   font-weight: bold;
   font-size: 1.5rem;
   margin: 0.5rem 0;
@@ -101,8 +107,9 @@ div {
   padding: 2px;
 }
 
-h1{/*drop shadow with offset of 2 pixels horizontally and vertically, a blur radius of 1 pixels */
-  text-shadow: 2px 2px 1px var(--col-03);
+h1{/*drop shadow with offset of 3 pixels horizontally and vertically, a blur radius of 1 pixels */
+  color: var(--col-04);
+  text-shadow: 3px 3px 1px var(--col-03);
   font-size: 4rem;
 }
 
@@ -115,6 +122,9 @@ h1{/*drop shadow with offset of 2 pixels horizontally and vertically, a blur rad
   margin-bottom: 0.5rem;
 }
 
+a {
+  color: var(--col-04); /*change colour of hyperlink text */
+}
 /*
   Filter Categories for Recipe Websites
 
