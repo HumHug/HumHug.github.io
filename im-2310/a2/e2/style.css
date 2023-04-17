@@ -19,7 +19,7 @@
   --col-01: #332f35; /* light blue */
   --col-02: #c7bdd1;
   --col-03: #27232a; /* light orange */
-  --col-04: #b6e878;
+  --col-04: #eeeeee;
   --border: 2px solid var(--col-03);
 }
 
@@ -65,7 +65,7 @@ body{
 }
 
 .SelectedFilter{
-  color: rgb(201, 7, 7);
+  color: var(--col-04);
 }
 
 .RecipeLink{
