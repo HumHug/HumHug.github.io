@@ -1,0 +1,190 @@
+/*
+/======================================\
+|         CSS Styles for Recipe         |
+|              Website                  |
+\======================================/
+*/
+
+/* z-index order */
+*{
+  box-sizing: border-box;
+  background-origin: border-box;
+  margin: 0;
+}
+
+/* Basis for colour palette comes from 1bit Monitor Glow Palette by Polyducks */
+/* https://lospec.com/palette-list/1bit-monitor-glow */
+/* you're welcome to change the colours if you want or any of the other general page style */
+:root{
+  --col-01: #332f35; /* light blue */
+  --col-02: #c7bdd1;
+  --col-03: #27232a; /* light orange */
+  --col-04: #b6e878;
+  --border: 2px solid var(--col-03);
+}
+
+body{
+  font-family: "Open Sans";
+  display: flex;
+  flex-direction: column;
+  background-color: var(--col-01);
+  color: var(--col-02);
+  padding: 2vw;
+  justify-content: center;
+  align-items: center;
+}
+
+/*
+  i've set up a basic flexbox for each recipe container - you might want to change some of the 
+  flex properties here on the container or on the individual flex items depending on how you want to style them
+*/
+.RecipeBox{
+  display: flex;
+  flex-direction: column;
+  border: var(--border);
+  background-color: var(--col-03);
+}
+
+.FilterSection{
+
+}
+
+.FilterBox{
+
+}
+
+.FilterButton{
+  background-color: var(--col-03); /* light orange */
+  color: var(--col-02);
+  border: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.SelectedFilter{
+  color: rgb(201, 7, 7);
+}
+
+.RecipeLink{
+  color: var(--col-02); /* light orange */
+}
+
+.RecipeName{
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+
+.RecipeImg {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+}
+
+@media (max-width: 500px) {
+  .RecipeImg {
+    max-width: 100%;
+  }
+}
+/*sets image to 500px*/
+/*and will scale down when screen size is less then 500px*/
+/*this will help with phone compatibility*/
+/*"display: block; and margin: 0 auto; center the image horizontally with margins."*/
+
+div {
+  padding: 2px;
+}
+
+h1{/*drop shadow with offset of 2 pixels horizontally and vertically, a blur radius of 1 pixels */
+  text-shadow: 2px 2px 1px var(--col-03);
+  font-size: 4rem;
+}
+
+.Author{
+  text-align: center;
+  
+}
+
+.RecipeImageContainer{
+  margin-bottom: 0.5rem;
+}
+
+/*
+  Filter Categories for Recipe Websites
+
+  This CSS comment outlines the filter categories that are useful for a recipe website, and how they improve the user experience.
+
+  1. Author:
+     - Enables users to search for recipes created by specific chefs or food bloggers.
+     - Helps to build a sense of community and highlight different contributors.
+
+  2. Cuisine:
+     - Allows users to search for recipes based on their preferred type of cuisine.
+     - Provides inspiration for trying new types of cuisine.
+
+  3. Skill Level:
+     - Enables users to search for recipes based on their cooking proficiency.
+     - Provides a better user experience for users with varying levels of experience.
+
+  4. Dietary Requirements:
+The Dietary Requirements filter is essential as it allows people's dietary needs not to have to sift through recipes there are not able to eat making the browsing experience 
+     - Helps to cater to a wider range of users with different dietary needs and preferences.
+
+  By offering these filter categories, recipe websites can improve the user experience and cater to the needs and preferences of their users.
+*/
+
+
+
+
+
+
+
+/* .Attribution{
+
+}
+
+.Publisher{
+
+}
+
+.Cuisine{
+
+}
+
+.TimeToCook{
+
+}
+
+.SkillLevel{
+
+}
+
+.Course{
+
+}
+
+.Servings{
+
+}
+
+.Dietary{
+
+}
+
+.DatePublished{
+
+}
+
+.DateUpdated{
+
+}
+
+.SpecialEquipment{
+
+} */
