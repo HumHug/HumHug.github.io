@@ -186,4 +186,14 @@ muteButton.style.backgroundImage = "url('./icons/unmute.svg')";
 muteButton.addEventListener('click', muteUnmute);
 
 
+const showMoreButton = document.querySelector('.show-more-button');
+const hiddenText = document.querySelector('.hidden');
 
+showMoreButton.addEventListener('click', () => {
+  hiddenText.classList.toggle('hidden');
+  if (hiddenText.classList.contains('hidden')) {
+    showMoreButton.textContent = 'Show More';
+  } else {
+    showMoreButton.textContent = 'Show Less';
+  }
+});

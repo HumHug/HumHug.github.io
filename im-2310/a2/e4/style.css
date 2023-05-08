@@ -151,3 +151,45 @@ Set styles for a mute button with an icon that changes when muted
 
 
 
+/*here is the css code for the description with the show more button */
+.video-description {
+  padding: 1rem;
+  background-color: var(--col-01);
+  color: var(--col-02);
+}
+
+.video-description h2 {
+  margin-top: 0;
+}
+
+.video-description p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.video-description .hidden {
+  display: none;
+}
+
+.video-description .show-more-button {
+  background-color: var(--col-03);
+  border: none;
+  color: var(--col-02);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.video-description .show-more-button:hover {
+  background-color: var(--col-04);
+}
+
+.video-description .show-more-button:focus {
+  outline: none;
+}
+
+.video-description .show-more-button:active {
+  background-color: var(--col-06);
+}
